@@ -16,7 +16,7 @@ const Counter = sequelize.define("Counter", {
   count: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    defaultValue: 50,
+    defaultValue: 2,
   },
 });
 
