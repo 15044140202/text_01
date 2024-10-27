@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
 app.post("/api/count", async (req, res) => {
   const { action } = req.body;
   if (action === "inc") {
-    await Counter.create();
+    await Counter.increment('count', { by: 2 });
   } else if (action === "clear") {
     await Counter.destroy({
       truncate: true,
